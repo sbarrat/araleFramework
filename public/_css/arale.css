@@ -1,0 +1,162 @@
+@CHARSET "UTF-8";
+body{
+	font: 80%/1.45em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background-color: #ddd;
+}
+h2{
+	color:#656E00
+}
+#header{
+	width:950px;
+	margin:auto;
+	background-color:#9aa900;
+	color:#fff;
+	height:130px;
+}
+#container{
+	width:950px;
+	margin:auto;
+	background-color:#fff;
+	height:600px;
+	
+}
+#footer{
+	width:950px;
+	margin:auto;
+	font-size:0.625em;
+	background-color:#656E00;
+	color:#fff;
+	height:30px;
+	text-align:right;
+}
+
+#login{
+	width:425px;
+	margin:auto;
+	padding-top:50px;
+	
+}
+legend{
+	font-size:1em;
+	color:#656E00;
+	font-weight:bold;
+}
+#login input{
+	float:left;
+}
+#login label{
+	float:left;
+	width:150px;
+	text-align:right;
+	display:block;
+}
+#rsvErrors{
+	clear:both;
+}
+#menu{
+	background:#777f20;
+	color:#fff;
+	height:2em;
+}
+#menu a{
+	text-decoration:none;
+	color:#fff;
+}
+.titulo{
+	background-color:#656E00;
+}
+.boton{
+	background-color:#CAD45F;
+}
+.boton, .titulo{
+	cursor:pointer;
+	color:#fff;
+	float:left;
+	height:25px;
+	font-size:1em;
+	padding:0.25em;
+	margin-left:0.625em;
+	width:150px;
+	text-align: center;
+}
+.boton:hover, .titulo:hover{
+	background:#656E00;
+}
+#wrapper{
+	padding: 40px;
+}
+#actionResult{
+	clear:both;
+	border-top:thin solid #656E00;
+}
+
+#contactos {margin-top:20px;}
+#contactos .campo{
+	display:block;
+	float:left;
+	width:550px;
+	
+}
+#contactos label{
+	float:left;
+	width:250px;
+	text-align:right;
+	display:block;
+	color:#656E00;
+	font-weight:bold;
+	padding-right:1em;
+}
+.icono{
+	cursor:pointer;
+}
+.tituloSeccion{
+	float:left;
+	width:300px;
+}
+.descargas{
+	float:right;
+	width:300px;
+	text-align:right;
+	margin-top:1em;
+}
+.okay{
+	background:#e6efc2 url("../_images/s_okay.png") no-repeat center left;
+	color:#264409;
+	border:thin solid #c6d880;
+	width:200px;
+	text-align:left;
+	text-indent:1em;
+	padding:0.8em;
+	float:left;
+}
+.error{
+	background:#fbe3e4 url("../_images/s_error.png") no-repeat center left;
+	color:#8a1f11;;
+	border:thin solid #fbc2c4;
+	width:200px;
+	text-align:left;
+	text-indent:1em;
+	padding:0.8em;
+	float:left;
+}
+#rsvErrors{
+	background:#fbe3e4 url("../_images/s_error.png") no-repeat top left;
+	color:#8a1f11;
+	border:thin solid #fbc2c4;
+	padding:0.8em;
+	display:none;
+	clear: both;
+	margin-bottom:1em;
+}
+.errorField{
+	background:#fbe3e4;
+	color:#8a1f11;
+}
+.formFields{
+	clear:both;
+	display:block;
+}
+
