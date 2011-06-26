@@ -31,7 +31,6 @@ class Users extends Sql
     public function __construct ()
     {
         parent::__construct();
-        $this->password = sha1($password);
         $this->_table = strtolower(__CLASS__);
         $this->_fields = parent::nombresCampos($this->_table);
     }
@@ -42,15 +41,14 @@ class Users extends Sql
      * @return boolean
      */
     public function login($vars){
-        $sql = "SELECT * from `{$this->_table}`
-        WHERE `username` LIKE :username
-        AND `password` LIKE sha1(:password)";
-        parent::ejecuta($sql,$vars);
-        $row = parent::resultadoUnico(__CLASS__);
+    	
+        $vars['password'] = sha1($vars['password']);
+        $row = parent::showOne($this->_table, 
+        array('username','password'), $vars);
         if($row->username == $vars['username'] && 
-        $row->password == sha1($vars['password'])){
-        session_start();
-        $_SESSION['username'] = $row->username;
+        $row->password == $vars['password']){
+        	session_start();
+        	$_SESSION['username'] = $row->username;
             return true;
         }
         else

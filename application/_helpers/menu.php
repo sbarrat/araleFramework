@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION['usuario'])){
+if(isset($_SESSION['username'])){
     $html = <<<EOD
 	<div id="menu">
 		<div id='Contactos' class='opcion boton'>Informaciones Web</div>

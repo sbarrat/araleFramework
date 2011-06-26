@@ -11,11 +11,11 @@ class Sql
     
     public function __construct ()
     {
-        $dbname = ""; //Our dbname
-        $host = ""; //Our host normally localhost
-        $port = ""; //Our port normally 3306
-        $username = ""; //Our user
-        $password = "";//Our password
+        $dbname = "arale"; //Our dbname
+        $host = "localhost"; //Our host normally localhost
+        $port = "3306"; //Our port normally 3306
+        $username = "arale"; //Our user
+        $password = "HDCe5wMGfncnyWcp";//Our password
         $dsn = "mysql:dbname={$dbname};host={$host};port={$port}";
         
         try{
@@ -86,11 +86,17 @@ class Sql
     protected function showAll($tabla){
         
     }
-    protected function showOne($table,$field,$var){
-        $sql = "SELECT * FROM `{$table}` 
-        WHERE `{$field}` LIKE :{$field}";
-        if($this->ejecuta($sql, array(":{$field}"=> $var)))
-            return $this->resultadoUnico($table);
+    protected function showOne($table,$fields,$var){
+        $sql = "SELECT * FROM `{$table}` WHERE ";
+        foreach($fields as $field){
+        	$sql .= " `{$field}` LIKE :{$field} AND";
+        	$data[":{$field}"] = $var[$field];
+        }
+        
+        $sql = substr($sql, 0, (strlen($sql)-3));
+        if($this->ejecuta($sql, $data)){
+            return $this->resultadoUnico(ucfirst($table));
+        }
     }
     
     /**
