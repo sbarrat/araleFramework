@@ -92,15 +92,14 @@ legend{
 	clear:both;
 	border-top:thin solid #656E00;
 }
-
-#contactos {margin-top:20px;}
-#contactos .campo{
+/*FORMULARIO*/
+.form {margin-top:20px;}
+.form .campo{
 	display:block;
 	float:left;
 	width:550px;
-	
 }
-#contactos label{
+.form label{
 	float:left;
 	width:250px;
 	text-align:right;
@@ -159,4 +158,5 @@ legend{
 	clear:both;
 	display:block;
 }
+
 
