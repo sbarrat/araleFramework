@@ -5,9 +5,9 @@
  * Pagina inicial
  * 
  * Este es el fichero que principal de la aplicacion
- * @author Ruben Lacasa <ruben@ensenalia.com>
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
  * @version 0.1
- * @package arale
  * 
  */
 session_start();
@@ -62,9 +62,7 @@ $(function() {
 </head>
 <body>
 	<header id="header">
-	<img 
-	src='http://www.ensenalia.com/sites/all/themes/ensenalia/images/logo.png' 
-	alt="www.ensenalia.com" />
+	<h1><?php echo "{$titulo} - {$version}"; ?></h1>
 	</header>
 	<section id="container"><?php 
 	if( isset( $_SESSION[ 'usuario' ] ) ):

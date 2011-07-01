@@ -6,12 +6,13 @@
  * 
  * Este es el fichero que carga en el include_path las rutas mas usadas
  * Y autocarga las clases
- * @author Ruben Lacasa <ruben@ensenalia.com>
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage application
  * @version 0.1
- * @package arale
  * 
  */
-date_default_timezone_set( 'Europe/Madrid' );
+date_default_timezone_set( 'Europe/Madrid' ); /* SET YOUR TIMEZONE */
 /**
  * Arale Framework Version
  * @var string

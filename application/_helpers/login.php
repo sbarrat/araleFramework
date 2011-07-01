@@ -1,4 +1,11 @@
 <?php
+/**
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage helpers
+ * @version 0.1
+ */
+
 session_start();
 if(isset($_SESSION['usuario'])){
     include_once 'menu.php';

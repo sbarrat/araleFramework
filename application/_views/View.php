@@ -3,10 +3,12 @@
  * NO TOCAR GENERACION AUTOMATICA BASADA EN <nombreControlador>
  * Fichero de control de Vista View.php?model=<nombreModelo>
  * Carga el submenu con el boton de formulario y el de listado
- * @author Ruben Lacasa <ruben@ensenalia.com>
- * @package AraleFramework
- * 
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage views
+ * @version 0.1
  */ 
+
 $SID = session_id();
 if( empty( $SID ) ) session_start();
 if( isset( $_SESSION['usuario'] ) ):

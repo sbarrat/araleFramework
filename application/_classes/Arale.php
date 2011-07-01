@@ -1,6 +1,9 @@
 <?php
 /** 
- * @author ruben
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage classes
+ * @version 0.1
  * 
  * 
  */

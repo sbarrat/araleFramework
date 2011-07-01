@@ -2,9 +2,10 @@
 
 /**
  * Esta clase controla los usuarios de la aplicacion
- * @author Ruben Lacasa <ruben@ensenalia.com>
- * @package araleFramework
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
  * @subpackage classes
+ * @version 0.1
  *
  */
 

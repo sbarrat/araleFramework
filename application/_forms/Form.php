@@ -2,8 +2,10 @@
 /**
  * NO TOCAR GENERA AUTOMATICAMENTE EL FORMULARIO
  * SOlO IMPORTA EL NOMBRE DEL FICHERO <nombreAccion>Form.php
- * @author Ruben Lacasa <ruben@ensenalia.com>
- * @package araleFramework
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage forms
+ * @version 0.1
  */
 $SID = session_id();
 if( empty( $SID ) ) session_start();

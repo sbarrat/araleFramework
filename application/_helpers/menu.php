@@ -1,4 +1,10 @@
 <?php
+/**
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage helpers
+ * @version 0.1
+ */
 if(isset($_SESSION['usuario'])){
     require_once 'config.inc.php';
     $html ="

@@ -1,7 +1,9 @@
 <?php
 /**
- * Enter description here ...
- * @author ruben
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage classes
+ * @version 0.1
  *
  */
 class Sql extends Arale

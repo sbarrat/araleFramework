@@ -8,8 +8,10 @@
  * Cambiamos los nombres de action, singular y plural por el nombre
  * de la accion el nombre que queramos mostrar en singular y el nombre
  * mostrar en plural
- * @author Ruben Lacasa <ruben@ensenalia.com>
- * @package araleFramework
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage lists
+ * @version 0.1
  */
 $SID = session_id();
 if( empty( $SID ) ) session_start();

@@ -3,8 +3,10 @@
  * 
  * Controla las acciones de la aplicacion 
  * NO TOCAR
- * @author Ruben Lacasa <ruben@ensenalia.com>
- * @package AraleFramework
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage helpers
+ * @version 0.1
  */
 $SID = session_id();
 if(empty($SID)) session_start();

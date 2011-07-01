@@ -1,4 +1,11 @@
 <?php
+/**
+ * Fichero que genera el fichero excel descargable del listado generado
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage downloads
+ * @version 0.1
+ */
 session_start();
 if( isset( $_SESSION[ 'usuario' ] ) ):
     require_once '../../application/config.inc.php';

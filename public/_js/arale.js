@@ -1,5 +1,9 @@
 /**
  * Funciones genericas de la aplicacion
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @subpackage js
+ * @version 0.1
  */
 
 function autoCompletaProvinciaPoblacion(){		

@@ -3,13 +3,14 @@
 /**
  * Esta clase controla las consultas que se generen en el ambito de alumnos y
  * devuelve su resultado
- * @author Ruben Lacasa <ruben@ensenalia.com>
- * @package arale
+ * @author Ruben Lacasa <rubendx@gmail.com>
+ * @package Arale Framework
+ * @version 0.1
  * @subpackage classes
  *
  */
 
-class Base extends Sql
+class Tabla extends Sql
 {
     /**
 	 * Las variables publicas definidas aqui tienen que ser
