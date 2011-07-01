@@ -1,0 +1,136 @@
+ARALE FRAMEWORK 0.1
+DEVEL by Sbarrat <rubendx@gmail.com>
+01-07-2011
+
+He desarrollado esta framework para facilitar el trabajo a la hora
+de crear formularios y listados con php basados en los datos que hay en una
+base de datos. 
+Para ello solo tenemos que modificar o crear varios ficheros basados en otros.
+
+CONVENCIONES DE NOMBRES
+- Las tablas y los campos de la base de datos es conveniente que sus nombres
+sean en minusculas y exista una clave principal llamada id
+- El nombre de las clases sera el mismo que el de la tabla pero la primera con 
+mayusculas. Por ejemplo tenemos la tabla usuarios la clase se llamara Usuarios.
+- Si vamos a crear un campo para almacenar direcciones de correo llamarlo email
+
+PROCEDIMIENTO Y USO
+Es conveniente tener la tabla creada antes de hacer estos pasos
+
+
+
+- fichero "application/config.inc.php"
+
+
+
+date_default_timezone_set( 'Europe/Madrid' ); /* SET YOUR TIMEZONE */
+
+* Sustiturir Europe/Madrid por la zona horaria correspondiente
+
+$titulo = "Arale Framework";
+
+* Sustituir Arale Framework por el titulo que queremos que tenga la aplicación
+
+$menu = array(
+array( 'controller'=>'Tabla', 'label'=>'Tabla Label' ),
+array( 'controller'=>'Tabla2', 'label'=>'Tabla2 Label' )
+);
+
+* Controlamos las opciones que queremos tener disponibles, el campo controller
+tiene que ser el nombre de la clase que creemos luego la cual tirara de la 
+tabla de la base de datos que queramos, es conveniente que si la tabla se llama
+por ejemplo "tabla" la clase se llame Tabla, y en label como queremos mostrar
+la opcion en el menu
+
+
+
+- fichero "application/_classes/Tabla.php"
+
+
+Hacemos un "guardar como" con este fichero y le ponemos de nombre el nombre
+de la Tabla a la que accedamos pero la primera con mayusculas
+Dentro de este fichero modificamos, y agregamos lo siguiente:
+
+* Agregar como variables publicas los campos de la tabla
+Esta ahora mismo como public id, y luego public var, eliminar la var e ir
+agregando los nombres de los campos como esten definidos en la tabla
+
+ private $_singular = "Base"; 
+ private $_plural = "Bases";
+ 
+ Poner el singular y el plural de la accion, para que sea en el titulo o boton
+ "Nueva Base" o "Listado de Bases"
+ 
+ public function columnasListado(){
+    	
+    	/**
+    	 * array('field'=>'nombre_campo',
+    	 * 	'label'=>'Etiqueta campo',
+    	 * 	['function'=>'funcion'])
+    	 */
+ * Agregar al array los campos que queremos que salgan en el listado
+ el campo field es el nombre del campo en la base de datos, el label como
+ queremos que se muestre, y el function es opcional, podemos llanzar una 
+ funcion creada por nosotros que actue sobre ese valor
+ 
+ public function camposFormulario(){
+    	/**
+    	 * Estructura 
+    	 * 'field' Es el nombre del campo en la tabla. -Requerido-
+    	 * 'label' Es como queremos mostralo en el formulario. -Requerido-
+    	 * 'type' Tipo de campo (text/label/textarea/select/date/hidden). -Requerido-
+    	 * 'size' Tamaño del campo. -Opcional-
+    	 * 'cols' Columnas Textarea. -Opcional- (Solo textarea)
+    	 * 'rows' Filas Textarea Opcional. (Solo textarea)
+    	 * 'function' Funcion que se lanza para tratar los datos o obtenerlos. -Opcional-
+    	 * 'required' Establecemos el campo obligatorio. -Opcional-
+    	 * 'value' Establecemos el valor por defecto del campo. -Opcional-
+    	 * Importante: Para la validacion de email el campo debe llamarse email
+    	 */   	 
+ $fields = array(
+    	array('field'=>'','label'=>'','type'=>''),
+    	);
+* Agregar al array los campos que queremos que salgan en el formulario con
+los valores indicados. NO AGREGAR EL CAMPO id, se agrega automaticamente
+ 
+ public function especificosList(){
+        
+    } 
+ public function especificosForm(){
+        
+    }
+ public function especificosView(){
+        
+    }
+ Podemos incluir dentro de estos metodos funciones personalizadas
+ por nosotros que se lanzen o en el Listado, en el formulario, o en la
+ vista principal de la opcion, las cuales incluiremos en la seccion marcada
+ en la clase para insertar funciones propias de la opcion.
+ 
+ 
+ 
+ - fichero "application/_classes/Sql.php"
+ 
+ private $_dbname = "";/*DBNAME*/
+ private $_host ="127.0.0.1";/*HOST IP*/
+ private $_port = "3306";/*HOST PORT*/
+ private $_usuario = "";/*DB USER*/
+ private $_password = "";/*DB PASSWORD*/
+ 
+ Establecer el nombre de la base de datos, ip del servidor, puerto del
+ servidor, usuario de la base de datos y contraseña.
+ 
+ Opciones especiales:
+ Si nuestra aplicacion necesita acceder a varias bases de datos, bastara con
+ hacer una copia de el fichero Sql.php llamarlo de otra manera por ejemplo
+ OtraSql.php y la clases que creemos que acceda a esa base cambiar el Extends Sql
+ por Extends OtraSql
+ 
+ 
+ Proximas versiones y Revisiones
+ - Agregar el campo select al tipo de campos del formulario, con la
+ opcion de autocompletar
+ - Gererar script que cree las clases automaticamente con pasarle el nombre
+ 
+ 
+             	
