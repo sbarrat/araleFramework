@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+.primary-1 { background-color: #6198B9 }
+.primary-2 { background-color: #5D869D }
+.primary-3 { background-color: #357092 }
+.primary-4 { background-color: #9AC9E5 }
+.primary-5 { background-color: #B5D3E5 }
+
+.secondary-a-1 { background-color: #6E75C4 }
+.secondary-a-2 { background-color: #696DA6 }
+.secondary-a-3 { background-color: #3D449B }
+.secondary-a-4 { background-color: #A3A8E9 }
+.secondary-a-5 { background-color: #BCC0E9 }
+
+.secondary-b-1 { background-color: #62C593 }
+.secondary-b-2 { background-color: #60A883 }
+.secondary-b-3 { background-color: #369C68 }
+.secondary-b-4 { background-color: #98E9C0 }
+.secondary-b-5 { background-color: #B6E9CF }
+
+.complement-1 { background-color: #FFC57E }
+.complement-2 { background-color: #D9AF7C }
+.complement-3 { background-color: #C98E46 }
+.complement-4 { background-color: #FFD7A6 }
+.complement-5 { background-color: #FFE6C7 }
